@@ -1,7 +1,9 @@
 services:
   app:
+    image: ruzinovrun143/docker-project-74
     build:
       context: .
+      dockerfile: Dockerfile.production
     volumes:
       - ./app:/app
     command: make test
