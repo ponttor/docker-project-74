@@ -9,8 +9,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      - name: Install dependencies
+        run: npm install
+      
       - name: Run tests
-        run: make prepare-env | make test
+        run: make test
 
       - name: Login to Dockerhub
         uses: docker/login-action@v2
